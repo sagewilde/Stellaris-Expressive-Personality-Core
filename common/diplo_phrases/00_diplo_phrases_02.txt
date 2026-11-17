@@ -3,7 +3,7 @@
 ###
 ### This is a load-bearing file! Be advised; deleting, renaming, or otherwise fucking with this file or anything
 ### in it could break important moving parts. Likewise, fucking with the "is_special_personality" trigger from 
-### the pirate_scripted_triggers.txt file WILL break dialogue if you don't know what you're doing (or even if 
+### the expressive_scripted_triggers.txt file WILL break dialogue if you don't know what you're doing (or even if 
 ### you do, sometimes). 
 ###
 ### If you are using this as a template to make your own hyper-detailed AI Personalities, then I'm sorry to say 

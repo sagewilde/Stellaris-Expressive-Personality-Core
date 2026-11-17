@@ -1441,7 +1441,7 @@ action_form_commercial_pact = {
 		}
 		else_if = {
 			limit = {
-				is_megacorp = no
+				NOT = { has_authority = auth_corporate }
 			}
 			custom_tooltip = {
 				fail_text = requires_embassy_or_diplomatic_networking
@@ -1465,11 +1465,11 @@ action_form_commercial_pact = {
 
 	should_ai_propose = {
 		weight = 5
-		# More likely to propose if we're a megacorp
+		# More likely to propose if we're corporation
 		modifier = {
 			factor = 2
 			root = {
-				is_megacorp = yes
+				has_authority = auth_corporate
 			}
 		}
 		# More likely if we already have good relations
