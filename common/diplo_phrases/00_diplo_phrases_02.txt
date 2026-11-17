@@ -31,8 +31,7 @@ action_form_migration_pact = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -55,8 +54,7 @@ action_form_migration_pact = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -78,8 +76,7 @@ action_form_migration_pact = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -185,8 +182,7 @@ action_form_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -221,8 +217,7 @@ action_form_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -237,8 +232,7 @@ action_form_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -332,8 +326,7 @@ action_break_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -368,8 +361,7 @@ action_break_migration_pact = {
 						NOT = { is_same_empire = event_target:ratling_country }
 					}
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -436,8 +428,7 @@ action_open_borders = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -449,8 +440,7 @@ action_open_borders = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -462,8 +452,7 @@ action_open_borders = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -559,8 +548,7 @@ action_close_borders = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -572,8 +560,7 @@ action_close_borders = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -585,8 +572,7 @@ action_close_borders = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -684,8 +670,7 @@ action_invite_to_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -708,8 +693,7 @@ action_invite_to_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -731,8 +715,7 @@ action_invite_to_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -836,8 +819,7 @@ action_invite_to_federation = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				FROM = {
 					has_federation = yes
 				}
@@ -850,8 +832,7 @@ action_invite_to_federation = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				FROM = {
 					has_federation = no
 				}
@@ -933,7 +914,7 @@ action_invite_to_federation = {
 					has_federation = no
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_megacorp = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -945,7 +926,7 @@ action_invite_to_federation = {
 					has_federation = yes
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_megacorp = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -1096,8 +1077,7 @@ action_invite_to_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				FROM = {
@@ -1109,8 +1089,7 @@ action_invite_to_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				FROM = {
@@ -1241,8 +1220,7 @@ action_invite_to_federation = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 			}
 		}
 		HM_ITOA_REFUSE = {
@@ -1445,8 +1423,7 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -1469,8 +1446,7 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -1492,8 +1468,7 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -1604,8 +1579,7 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 				NOT = { is_same_species_class = FROM }
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -1613,8 +1587,7 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				is_same_species_class = FROM
@@ -1687,7 +1660,7 @@ action_ask_to_join_federation = {
 				from = {
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_megacorp = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -1786,8 +1759,7 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -1876,8 +1848,7 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -1957,8 +1928,7 @@ action_leave_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2031,7 +2001,7 @@ action_leave_federation = {
 				from = {
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_megacorp = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -2117,8 +2087,7 @@ action_leave_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2192,8 +2161,7 @@ action_kick_from_federation = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2205,8 +2173,7 @@ action_kick_from_federation = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -2218,8 +2185,7 @@ action_kick_from_federation = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2314,8 +2280,7 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -2338,8 +2303,7 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -2361,8 +2325,7 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -2465,8 +2428,7 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2478,8 +2440,7 @@ action_offer_federation_association_status = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -2491,8 +2452,7 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2503,8 +2463,7 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2628,8 +2587,7 @@ action_revoke_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2641,8 +2599,7 @@ action_revoke_federation_association_status = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -2654,8 +2611,7 @@ action_revoke_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2755,8 +2711,7 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -2779,8 +2734,7 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -2802,8 +2756,7 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -2906,8 +2859,7 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2919,8 +2871,7 @@ action_ask_for_federation_association_status = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -2932,8 +2883,7 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -2944,8 +2894,7 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -3063,8 +3012,7 @@ action_end_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -3076,8 +3024,7 @@ action_end_federation_association_status = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -3089,8 +3036,7 @@ action_end_federation_association_status = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -3184,8 +3130,7 @@ action_ask_to_leave_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -3240,8 +3185,7 @@ action_ask_to_leave_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -3297,8 +3241,7 @@ action_ask_to_leave_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -3354,8 +3297,7 @@ action_ask_to_leave_federation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -3415,8 +3357,7 @@ action_demand_subjugation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -3439,8 +3380,7 @@ action_demand_subjugation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -3462,8 +3402,7 @@ action_demand_subjugation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -3572,7 +3511,7 @@ action_demand_subjugation = {
 				}
 				NOR = {
 					is_xenophobe = yes
-					is_megacorp = yes
+					has_authority = auth_corporate
 				}
 				OR = {
 					is_friendly_to = FROM
@@ -3591,7 +3530,7 @@ action_demand_subjugation = {
 				}
 				NOR = {
 					is_xenophobe = yes
-					is_megacorp = yes
+					has_authority = auth_corporate
 				}
 				NOT = {
 					is_friendly_to = FROM
@@ -3608,8 +3547,7 @@ action_demand_subjugation = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				is_xenophobe = yes
 				OR = {
 					is_friendly_to = FROM
@@ -3626,8 +3564,7 @@ action_demand_subjugation = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				is_xenophobe = yes
 				NOT = {
 					is_friendly_to = FROM
@@ -3715,8 +3652,7 @@ action_demand_subjugation = {
 						has_ai_personality = fanatic_purifiers 
 						is_seap_personality = yes
 					}
-					is_megacorp = no
-					is_megaunion = no
+					NOT = { has_authority = auth_corporate }
 					OR = {
 						is_friendly_to = ROOT
 						is_cordial_to = ROOT
@@ -3733,8 +3669,7 @@ action_demand_subjugation = {
 						has_ai_personality = fanatic_purifiers 
 						is_seap_personality = yes
 					}
-					is_megacorp = no
-					is_megaunion = no
+					NOT = { has_authority = auth_corporate }
 					NOR = {
 						is_friendly_to = ROOT
 						is_cordial_to = ROOT
@@ -3825,8 +3760,7 @@ action_demand_subjugation = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				is_xenophobe = yes
@@ -3919,7 +3853,7 @@ action_demand_subjugation = {
 				}
 				NOR = {
 					is_xenophobe = yes
-					is_megacorp = yes
+					has_authority = auth_corporate
 				}
 				OR = {
 					is_friendly_to = FROM
@@ -3938,7 +3872,7 @@ action_demand_subjugation = {
 				}
 				NOR = {
 					is_xenophobe = yes
-					is_megacorp = yes
+					has_authority = auth_corporate
 				}
 				NOT = {
 					is_friendly_to = FROM
@@ -3960,8 +3894,7 @@ action_demand_subjugation = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				is_xenophobe = yes
 				OR = {
 					is_friendly_to = FROM
@@ -3983,8 +3916,7 @@ action_demand_subjugation = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				is_xenophobe = yes
 				NOT = {
 					is_friendly_to = FROM
@@ -4067,8 +3999,7 @@ action_ask_to_become_subjugated = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -4091,8 +4022,7 @@ action_ask_to_become_subjugated = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -4114,8 +4044,7 @@ action_ask_to_become_subjugated = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -4280,7 +4209,7 @@ action_ask_to_become_subjugated = {
 				FROM = {
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_megacorp = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -4503,8 +4432,7 @@ action_demand_subsidiary = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -4590,8 +4518,7 @@ action_demand_subsidiary = {
 		DEMAND_SUBS_SELECT_01 = {
 			trigger = {
 				FROM = { 
-					is_megacorp = no
-					is_megaunion = no 
+					NOT = { has_authority = auth_corporate } 
 					NOT = { is_seap_personality = yes }
 				}
 			}
@@ -4622,8 +4549,7 @@ action_demand_subsidiary = {
 		# NON-CORP
 		DEMAND_SUBS_ACCEPT_01 = {
 			trigger = {
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -4639,8 +4565,7 @@ action_demand_subsidiary = {
 		# NON-CORP
 		DEMAND_SUBS_REFUSE_01 = {
 			trigger = {
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -4676,8 +4601,7 @@ action_ask_to_become_subsidiary = {
 		# NON-CORP
 		ASK_FOR_SUBS_PROPOSE_01 = {
 			trigger = {
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -4715,8 +4639,7 @@ action_release_subject = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 			}
 		}
 		HM_RELEASE_SUBJECT_SELECT = {
@@ -4803,7 +4726,7 @@ action_release_subject = {
 				from = {
 					NOR = {
 						has_ethic = ethic_gestalt_consciousness
-						is_megacorp = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -4894,8 +4817,7 @@ action_release_subject = {
 					has_ai_personality = fanatic_purifiers 
 					is_seap_personality = yes
 				}
-				is_megacorp = no
-				is_megaunion = no
+				NOT = { has_authority = auth_corporate }
 			}
 		}
 		HM_RELEASE_SUBJECT_ACCEPT = {
@@ -4972,8 +4894,7 @@ action_ask_to_be_released_subject = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5047,8 +4968,7 @@ action_ask_to_be_released_subject = {
 						has_ai_personality = fanatic_purifiers 
 						is_seap_personality = yes
 					}
-					is_megacorp = no
-					is_megaunion = no
+					NOT = { has_authority = auth_corporate }
 				}
 			}
 		}
@@ -5151,8 +5071,7 @@ action_ask_to_be_released_subject = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5267,8 +5186,7 @@ action_ask_to_be_released_subject = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5366,8 +5284,7 @@ action_ask_to_be_released_subject = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5444,8 +5361,7 @@ action_demand_tributary = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -5468,7 +5384,8 @@ action_demand_tributary = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
+					has_authority = auth_corporate
+					is_seap_personality = yes
 				}
 				OR = {
 					is_oligarchic_authority = yes
@@ -5489,7 +5406,8 @@ action_demand_tributary = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
+					has_authority = auth_corporate
+					is_seap_personality = yes
 				}
 				OR = {
 					is_democratic_authority = yes
@@ -5589,8 +5507,7 @@ action_demand_tributary = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5602,8 +5519,7 @@ action_demand_tributary = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -5615,8 +5531,7 @@ action_demand_tributary = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5627,8 +5542,7 @@ action_demand_tributary = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5747,8 +5661,7 @@ action_ask_to_become_tributary = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5816,8 +5729,7 @@ action_ask_to_become_tributary = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5829,8 +5741,7 @@ action_ask_to_become_tributary = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 						is_seap_personality = yes
 					}
 				}
@@ -5842,8 +5753,7 @@ action_ask_to_become_tributary = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5854,8 +5764,7 @@ action_ask_to_become_tributary = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 			}
@@ -5954,8 +5863,8 @@ action_demand_thrall = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -6030,8 +5939,7 @@ action_demand_thrall = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 				}
 			}
 		}
@@ -6041,8 +5949,7 @@ action_demand_thrall = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 				}
 			}
 		}
@@ -6074,8 +5981,8 @@ action_ask_to_become_thrall = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -6109,8 +6016,7 @@ action_ask_to_become_thrall = {
 				from = {
 					NOR = {
 						is_machine_empire = yes
-						is_megacorp = yes
-						is_megaunion = yes
+						has_authority = auth_corporate
 					}
 				}
 			}
@@ -6140,8 +6046,8 @@ action_demand_dominion = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -6216,8 +6122,7 @@ action_demand_dominion = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 				}
 			}
 		}
@@ -6227,8 +6132,7 @@ action_demand_dominion = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 				}
 			}
 		}
@@ -6260,8 +6164,8 @@ action_ask_to_become_dominion = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -6322,8 +6226,8 @@ action_demand_signatory = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -6422,8 +6326,8 @@ action_ask_to_become_signatory = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -6484,8 +6388,8 @@ action_demand_satellite = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -6584,8 +6488,8 @@ action_ask_to_become_satellite = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -6640,8 +6544,7 @@ action_form_commercial_pact = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -6664,8 +6567,7 @@ action_form_commercial_pact = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -6687,8 +6589,7 @@ action_form_commercial_pact = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -6893,8 +6794,7 @@ action_form_research_agreement = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -6907,8 +6807,7 @@ action_form_research_agreement = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -6920,8 +6819,7 @@ action_form_research_agreement = {
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					is_seap_personality = yes
 				}
 				OR = {
@@ -8605,8 +8503,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8622,8 +8519,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8639,8 +8535,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8659,8 +8554,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8679,8 +8573,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8696,8 +8589,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8775,8 +8667,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8792,8 +8683,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					is_seap_personality = yes
 				}
@@ -8808,8 +8698,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					is_seap_personality = yes
 				}
@@ -8827,8 +8716,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					is_seap_personality = yes
 				}
@@ -8846,8 +8734,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					is_seap_personality = yes
 				}
@@ -8862,8 +8749,7 @@ action_pledge_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					is_seap_personality = yes
 				}
@@ -8904,8 +8790,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8921,8 +8806,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8938,8 +8822,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8958,8 +8841,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8978,8 +8860,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -8995,8 +8876,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9074,8 +8954,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9091,8 +8970,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9108,8 +8986,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9128,8 +9005,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9148,8 +9024,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9165,8 +9040,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9205,8 +9079,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9222,8 +9095,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9239,8 +9111,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9259,8 +9130,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9279,8 +9149,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9296,8 +9165,7 @@ action_propose_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9339,8 +9207,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9356,8 +9223,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9373,8 +9239,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9393,8 +9258,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9413,8 +9277,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9430,8 +9293,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9509,8 +9371,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9526,8 +9387,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9543,8 +9403,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9563,8 +9422,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9583,8 +9441,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9600,8 +9457,7 @@ action_propose_to_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9643,8 +9499,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9660,8 +9515,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9677,8 +9531,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9697,8 +9550,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9717,8 +9569,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9734,8 +9585,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9813,8 +9663,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9830,8 +9679,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9847,8 +9695,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9867,8 +9714,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9887,8 +9733,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9904,8 +9749,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9944,8 +9788,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9961,8 +9804,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9978,8 +9820,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -9998,8 +9839,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -10018,8 +9858,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
@@ -10035,8 +9874,7 @@ action_break_secret_fealty = {
 			trigger = {
 				NOR = {
 					is_machine_empire = yes
-					is_megacorp = yes
-					is_megaunion = yes
+					has_authority = auth_corporate
 					has_ai_personality = hive_mind
 					has_ai_personality = fanatic_purifiers
 					is_seap_personality = yes
