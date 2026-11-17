@@ -2,13 +2,13 @@
 ### These are all the vanilla overwrites necessary for Sage Wilde's Expressive AI Personalities. 
 ###
 ### This is a load-bearing file! Be advised; deleting, renaming, or otherwise fucking with this file or anything
-### in it could break important moving parts. Likewise, fucking with the "is_special_personality" trigger from 
+### in it could break important moving parts. Likewise, fucking with the "is_seap_personality" trigger from 
 ### the hippies_scripted_triggers.txt file WILL break dialogue if you don't know what you're doing (or even if 
 ### you do, sometimes). 
 ###
 ### If you are using this as a template to make your own hyper-detailed AI Personalities, then I'm sorry to say 
 ### that you're going to have to write in a dialogue entry for every single instance that says 
-### "NOT = { is_special_personality = yes }" or includes "is_special_personality = yes" in a NOR argument. If it 
+### "NOT = { is_seap_personality = yes }" or includes "is_seap_personality = yes" in a NOR argument. If it 
 ### says 'trigger = { always = yes }', then REALLY don't fuck with it, that's hard-coded and cannot be changed, 
 ### no matter what. When in doubt, check the diplo_phrases files. I tried my best to organize them by category 
 ### to make them easy to read.
@@ -37,7 +37,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = no }
 				ROOT = { 
 					is_nomadic = yes 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -47,7 +47,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = yes }
 				ROOT = { 
 					is_nomadic = no
-					NOT = { is_special_personality = yes } 
+					NOT = { is_seap_personality = yes } 
 				}
 			}
 		}
@@ -57,7 +57,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = yes }
 				ROOT = { 
 					is_nomadic = yes
-					NOT = { is_special_personality = yes } 
+					NOT = { is_seap_personality = yes } 
 				}
 			}
 		}
@@ -68,7 +68,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = no }
 				ROOT = { 
 					is_nomadic = yes 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -77,7 +77,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = yes }
 				ROOT = { 
 					is_nomadic = no 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -86,7 +86,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = yes }
 				ROOT = { 
 					is_nomadic = yes 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -97,7 +97,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = no }
 				ROOT = { 
 					is_nomadic = yes 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -106,7 +106,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = yes }
 				ROOT = { 
 					is_nomadic = no 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -115,7 +115,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = yes }
 				ROOT = { 
 					is_nomadic = yes 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -126,7 +126,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = no }
 				ROOT = { 
 					is_nomadic = yes 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -135,7 +135,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = yes }
 				ROOT = { 
 					is_nomadic = no 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}
@@ -144,7 +144,7 @@ action_form_waystation_pact = {
 				FROM = { is_nomadic = yes }
 				ROOT = { 
 					is_nomadic = yes 
-					NOT = { is_special_personality = yes }
+					NOT = { is_seap_personality = yes }
 				}
 			}
 		}

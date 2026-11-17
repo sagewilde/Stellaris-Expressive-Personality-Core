@@ -1,6 +1,6 @@
 ### Mod Identifier
 
-has_sage_expressive_personalities = { always = yes }
+has_seap = { always = yes }
 
 ### Vanilla Overwrites
 
@@ -74,7 +74,7 @@ has_spearhead_doctrine_personality = {
 	}
 }
 
-is_special_personality = {
+is_seap_personality = {
 	OR = {
 		has_ai_personality = peaceful_counterculture
 		has_ai_personality = mirthful_bandits

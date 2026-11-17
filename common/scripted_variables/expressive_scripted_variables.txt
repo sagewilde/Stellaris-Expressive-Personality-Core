@@ -1,2 +1,0 @@
-# Mod Identifier
-@has_sage_expressive_personalities = 1

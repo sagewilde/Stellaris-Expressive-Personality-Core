@@ -1,0 +1,2 @@
+# Mod Identifier
+@has_seap = 1

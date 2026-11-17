@@ -43,7 +43,7 @@ This core contains the necessary overwrites to make SEAP work. Whether you have 
 - common/prescripted_flags
     Some of the prescripted nations included in SEAP's mods have their own unique introductions. This is to ensure that start screens appear correctly.
 - common/scripted_triggers and common/scripted_variables
-    In order to make these AI personalities exhibit certain important behaviors, like what fleet strategy they favor and whether they value xeno life, they refer to these scripted triggers. The most important trigger is 'is_special_personality', which dictates whether or not an empire has special dialogue in a given situation. Very important!
+    In order to make these AI personalities exhibit certain important behaviors, like what fleet strategy they favor and whether they value xeno life, they refer to these scripted triggers. The most important trigger is 'is_seap_personality', which dictates whether or not an empire has special dialogue in a given situation. Very important!
 - gfx/portraits/asset_selectors and gfx/portraits/city_sets
     This is where the most time-consuming part of the mod is managed. The Diplomacy rooms that you see when you talk to an empire are controlled here. While this isn't wholly necessary, it does ensure that when a new DLC drops and Paradox has new furniture for your galactic takeover, I can keep up with the catalogue.
 
