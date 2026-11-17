@@ -22,8 +22,8 @@
 
 Welcome to the Readme for Sage's Expressive AI Personalities! What the fuck is this? I'll tell you what it ain't.
 
-- It isn't made with generative AI, large language models, or any other automated bullshit. I made this by hand, like God herself intended. I drew the art, I wrote the dialogue, I made the code. Not even the thumbnail was made with AI, and everything I will ever make will adhere to those ethics.
-- It isn't to be distributed for-profit, at all, ever, for any reason. This shit's under the GNU license, respect it. You can use it, but you can't make people pay money for it. If you want to make your own Expressive Personality, feel free to use this core. Go nuts, gamer.
+- It isn't made with generative AI, large language models, or any other automated bullshit. I made this by hand, like God herself intended. I drew the art, I wrote the dialogue, I made the code. Not even the thumbnail was made with AI, and everything I will ever make will adhere to those ethics. I explicitly do not consent to the inclusion of this code, or any part of any SEAP mod, in the use of any agentic training material or dataset. Fuck ALL the way off with that shit.
+- It isn't to be distributed for-profit, at all, ever, for any reason. This shit's under the GNU license, respect it. You can use it, but you can't make people pay money for it. 
 - It isn't meant to break the game or add massively complicated new mechanics. This is purely for immersion and roleplay, and it's going to stay that way.
 
 So what _are_ Sage's Expressive AI Personalities?
