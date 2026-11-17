@@ -186,6 +186,7 @@ action_form_migration_pact = {
 					}
 				}
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -200,7 +201,12 @@ action_form_migration_pact = {
 					}
 					NOT = { exists = event_target:ratling_country }
 				}
-				NOT = { FROM = { is_megacorp = yes } }
+				FROM = { 
+					NOR = { 
+						is_megacorp = yes
+						is_megaunion = yes
+					} 
+				}
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -216,6 +222,7 @@ action_form_migration_pact = {
 					}
 				}
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -231,6 +238,7 @@ action_form_migration_pact = {
 					}
 				}
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -325,6 +333,7 @@ action_break_migration_pact = {
 					}
 				}
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -339,7 +348,12 @@ action_break_migration_pact = {
 					}
 					NOT = { exists = event_target:ratling_country }
 				}
-				NOT = { FROM = { is_megacorp = yes } }
+				FROM = { 
+					NOR = { 
+						is_megacorp = yes
+						is_megaunion = yes
+					} 
+				}
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -355,6 +369,7 @@ action_break_migration_pact = {
 					}
 				}
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -822,6 +837,7 @@ action_invite_to_federation = {
 					is_seap_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 				FROM = {
 					has_federation = yes
 				}
@@ -835,6 +851,7 @@ action_invite_to_federation = {
 					is_seap_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 				FROM = {
 					has_federation = no
 				}
@@ -1225,6 +1242,7 @@ action_invite_to_federation = {
 					is_seap_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 			}
 		}
 		HM_ITOA_REFUSE = {
@@ -1587,6 +1605,7 @@ action_ask_to_join_federation = {
 				NOT = { has_ethic = ethic_gestalt_consciousness }
 				NOT = { is_same_species_class = FROM }
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -3697,6 +3716,7 @@ action_demand_subjugation = {
 						is_seap_personality = yes
 					}
 					is_megacorp = no
+					is_megaunion = no
 					OR = {
 						is_friendly_to = ROOT
 						is_cordial_to = ROOT
@@ -3714,6 +3734,7 @@ action_demand_subjugation = {
 						is_seap_personality = yes
 					}
 					is_megacorp = no
+					is_megaunion = no
 					NOR = {
 						is_friendly_to = ROOT
 						is_cordial_to = ROOT
@@ -4569,7 +4590,8 @@ action_demand_subsidiary = {
 		DEMAND_SUBS_SELECT_01 = {
 			trigger = {
 				FROM = { 
-					is_megacorp = no 
+					is_megacorp = no
+					is_megaunion = no 
 					NOT = { is_seap_personality = yes }
 				}
 			}
@@ -4601,6 +4623,7 @@ action_demand_subsidiary = {
 		DEMAND_SUBS_ACCEPT_01 = {
 			trigger = {
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -4617,6 +4640,7 @@ action_demand_subsidiary = {
 		DEMAND_SUBS_REFUSE_01 = {
 			trigger = {
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -4653,6 +4677,7 @@ action_ask_to_become_subsidiary = {
 		ASK_FOR_SUBS_PROPOSE_01 = {
 			trigger = {
 				is_megacorp = no
+				is_megaunion = no
 				NOT = { is_seap_personality = yes }
 			}
 		}
@@ -4691,6 +4716,7 @@ action_release_subject = {
 					is_seap_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 			}
 		}
 		HM_RELEASE_SUBJECT_SELECT = {
@@ -4869,6 +4895,7 @@ action_release_subject = {
 					is_seap_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 			}
 		}
 		HM_RELEASE_SUBJECT_ACCEPT = {
@@ -5021,6 +5048,7 @@ action_ask_to_be_released_subject = {
 						is_seap_personality = yes
 					}
 					is_megacorp = no
+					is_megaunion = no
 				}
 			}
 		}
