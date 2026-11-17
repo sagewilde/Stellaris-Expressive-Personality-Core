@@ -28,7 +28,7 @@ Welcome to the Readme for Sage's Expressive AI Personalities! What the fuck is t
 
 So what _are_ Sage's Expressive AI Personalities?
 
-SEAP is a roleplay-centric dialogue overhaul that gives thoughtful, carefully crafted, expressive responses and behaviors to interstellar empires in Stellaris, the empire-builder sci-fi game by Paradox Interactive. Each AI Personality is intended to fill a niche that doesn't yet exist in Stellaris. These include greetings, declarations of war, offers to federate and subjugate, trade, and even insults. 
+SEAP (pronounced 'sheep') is a roleplay-centric dialogue overhaul that gives thoughtful, carefully crafted, expressive responses and behaviors to interstellar empires in Stellaris, the empire-builder sci-fi game by Paradox Interactive. Each AI Personality is intended to fill a niche that doesn't yet exist in Stellaris. These include greetings, declarations of war, offers to federate and subjugate, trade, and even insults. 
 
 ## What's in this Core ##
 This core contains the necessary overwrites to make SEAP work. Whether you have hippies, pirates, or commies, all of them require the same set of overwrites in order to work. 
