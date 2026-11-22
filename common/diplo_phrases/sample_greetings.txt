@@ -1,0 +1,792 @@
+
+###########################################################
+# Oh, dialogue. The bane of my existence, the curse of my hobby, the reason I have a bottle of Ibuprofen on my desk.
+# The sample text provided here should give you a decent head start on the mountain you're about to climb, but it obviously doesn't cover every concievable scenario. So, here's a rule of thumb for you:
+# greetings: I'm playing the game. 'FROM' is me, the player. 'ROOT' is the NPC who's talking to me.
+# It is convoluted, and even I still screw it up sometimes. But if you want to have fancy conditions and hyper-specific replies, feel free to look through Hippies, Pirates, and Worker's Union to see how I condition responses to each dialogue check. Be patient, take your time, this is hands-down the hardest part of making a personality mod.
+###########################################################
+
+# SEAP_SAMPLE GREETINGS
+greetings = {
+	SEAP_SAMPLE_HOSTILE_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_HOSTILE_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_HOSTILE_GREETING_05 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_CORP_HOSTILE_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { is_megacorp = yes }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_CORP_HOSTILE_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { is_megacorp = yes }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_CORP_HOSTILE_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { is_megacorp = yes }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	CORP_SEAP_SAMPLE_HOSTILE_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_megacorp = yes
+			FROM = { has_ai_personality = seap_sample }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	CORP_SEAP_SAMPLE_HOSTILE_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_megacorp = yes
+			FROM = { has_ai_personality = seap_sample }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	CORP_SEAP_SAMPLE_HOSTILE_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_megacorp = yes
+			FROM = { has_ai_personality = seap_sample }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_SEAP_SAMPLE_HOSTILE_GREETING = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_megaSEAP_SAMPLE =yes
+			NOT = { is_at_war_with = FROM }
+			FROM = {
+				has_ai_personality = seap_sample
+			}
+			OR = {
+				is_neutral_to = FROM
+				is_domineering_to = FROM
+				is_hostile_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_NEUTRAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_NEUTRAL_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_NEUTRAL_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_NEUTRAL_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	CORP_SEAP_SAMPLE_NEUTRAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { is_megacorp = yes }
+			is_megacorp = yes
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_CORP_NEUTRAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { is_megacorp = yes }
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_SEAP_SAMPLE_NEUTRAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { has_ai_personality = seap_sample }
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_THREATENED_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = from }
+			is_threatened_to = FROM
+		}
+	}
+	SEAP_SAMPLE_FRIENDLY_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_FRIENDLY_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_FRIENDLY_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_FRIENDLY_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	CORP_SEAP_SAMPLE_FRIENDLY_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_megacorp = yes
+			FROM = { has_ai_personality = seap_sample }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_CORP_FRIENDLY_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { is_megacorp = yes }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_SEAP_SAMPLE_FRIENDLY_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { has_ai_personality = seap_sample }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_WAR_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			is_at_war_with = FROM
+		}
+	}
+	SEAP_SAMPLE_WAR_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			is_at_war_with = FROM
+		}
+	}
+	SEAP_SAMPLE_WAR_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			is_at_war_with = FROM
+		}
+	}
+	CORP_SEAP_SAMPLE_WAR_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_megacorp = yes
+			FROM = { has_ai_personality = seap_sample }
+			is_at_war_with = FROM
+		}
+	}
+	CORP_SEAP_SAMPLE_WAR_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			is_megacorp = yes
+			FROM = { has_ai_personality = seap_sample }
+			is_at_war_with = FROM
+		}
+	}
+	SEAP_SAMPLE_CORP_WAR_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { is_megacorp = yes }
+			is_at_war_with = FROM
+		}
+	}
+	SEAP_SAMPLE_CORP_WAR_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { is_megacorp = yes }
+			is_at_war_with = FROM
+		}
+	}
+	SEAP_SAMPLE_SEAP_SAMPLE_WAR_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { has_ai_personality = seap_sample }
+			is_at_war_with = FROM
+		}
+	}
+	SEAP_SAMPLE_SEAP_SAMPLE_WAR_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { has_ai_personality = seap_sample }
+			is_at_war_with = FROM
+		}
+	}
+	SEAP_SAMPLE_SEAP_SAMPLE_WAR_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			FROM = { has_ai_personality = seap_sample }
+			is_at_war_with = FROM
+		}
+	}
+	SEAP_SAMPLE_OVERLORD_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			is_overlord_to = FROM
+		}
+	}
+	SEAP_SAMPLE_OVERLORD_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			is_overlord_to = FROM
+		}
+	}
+	SEAP_SAMPLE_VASSAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOR = {
+				is_at_war_with = FROM
+				is_disloyal_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_VASSAL_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOR = {
+				is_at_war_with = FROM
+				is_disloyal_to = FROM
+			}
+		}
+	}
+	SEAP_SAMPLE_VASSAL_GREETING_DISLOYAL_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			is_disloyal_to = FROM
+			NOT = { is_at_war_with = FROM }
+		}
+	}
+	SEAP_SAMPLE_VASSAL_DOMINEERING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = seap_sample
+			is_domineering_to = FROM
+			NOT = { is_at_war_with = FROM }
+		}
+	}
+	### Greetings to SEAP_SAMPLEs
+	TO_SEAP_SAMPLE_HOSTILE_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_HOSTILE_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_HOSTILE_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_HOSTILE_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_HOSTILE_GREETING_05 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_HOSTILE_GREETING_06 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_NEUTRAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_NEUTRAL_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_THREATENED_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = from }
+			is_threatened_to = FROM
+		}
+	}
+	TO_SEAP_SAMPLE_FRIENDLY_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_FRIENDLY_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_FRIENDLY_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_WAR_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			is_at_war_with = FROM
+		}
+	}
+	TO_SEAP_SAMPLE_WAR_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			is_at_war_with = FROM
+		}
+	}
+	TO_SEAP_SAMPLE_WAR_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			is_at_war_with = FROM
+		}
+	}
+	TO_SEAP_SAMPLE_VASSAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOR = {
+				is_at_war_with = FROM
+				is_disloyal_to = FROM
+			}
+		}
+	}
+	TO_SEAP_SAMPLE_VASSAL_GREETING_DISLOYAL_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			is_disloyal_to = FROM
+			NOT = { is_at_war_with = FROM }
+		}
+	}
+	TO_SEAP_SAMPLE_VASSAL_DOMINEERING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			FROM = { 
+				has_ai_personality = seap_sample 
+			}
+			is_domineering_to = FROM
+			NOT = { is_at_war_with = FROM }
+		}
+	}
+}

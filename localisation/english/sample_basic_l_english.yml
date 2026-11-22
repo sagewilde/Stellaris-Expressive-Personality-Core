@@ -1,0 +1,4 @@
+﻿l_english:
+# This is where I usually put things like the names and description of personality, explanations for opinion modifiers, and other bits and pieces. This is just to keep the diplo phrases locs clean and easy to read.
+ personality_seap_sample: "SEAP Sample Personality"
+ personality_seap_sample_desc: "Describe your personality here!"

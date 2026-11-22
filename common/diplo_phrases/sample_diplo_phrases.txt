@@ -1,0 +1,2213 @@
+##########################
+# SEAP_SAMPLE DIPLOMACY PHRASES
+##########################
+
+###########################################################
+# Oh, dialogue. The bane of my existence, the curse of my hobby, the reason I have a bottle of Ibuprofen on my desk.
+# The sample text provided here should give you a decent head start on the mountain you're about to climb, but it obviously doesn't cover every concievable scenario. So, here's a rule of thumb for you:
+# propose: I'm playing the game. 'FROM' is the NPC who sent it to me. 'ROOT' is me, the player.
+# consider, accept, refuse: I'm playing the game. 'FROM' is me, the player. 'ROOT' is the NPC.
+# It is convoluted, and even I still screw it up sometimes. But if you want to have fancy conditions and hyper-specific replies, feel free to look through Hippies, Pirates, and Worker's Union to see how I condition responses to each dialogue check. Be patient, take your time, this is hands-down the hardest part of making a personality mod.
+###########################################################
+
+# COMMERCE
+action_offer_trade_deal = {
+	propose = {
+		SEAP_SAMPLE_OFFER_TRADE_DEAL_PROPOSE_01 = {
+			only_for_trade = yes
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+			weight = { weight = 5 }
+		}
+		SEAP_SAMPLE_OFFER_TRADE_DEAL_PROPOSE_02 = {
+			only_for_trade = yes
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+			weight = { weight = 3 }
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_OFFER_TRADE_DEAL_GIFT_ACCEPT = {
+			only_for_gift = yes
+			trigger = {
+				has_ai_personality = seap_sample
+				NOR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_OFFER_TRADE_DEAL_GIFT_ACCEPT_HOSTILE = {
+			only_for_gift = yes
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_OFFER_TRADE_DEAL_ACCEPT = {
+			only_for_trade = yes
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_OFFER_TRADE_DEAL_REFUSE = {
+			only_for_trade = yes
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+# DEFENSIVE PACTS
+
+action_form_defensive_pact = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_FORM_DP_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_FORM_DP_PROPOSE_01 = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+		SEAP_SAMPLE_FORM_DP_PROPOSE_02 = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					is_species_class = MACHINE
+				}
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_FORM_DP_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_FORM_DP_REFUSE_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_FORM_DP_REFUSE_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_break_defensive_pact = {
+	select = {
+		SEAP_SAMPLE_BREAK_DP_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_BREAK_DP_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_BREAK_DP_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+# NON-AGGRESSION & INDEPENDENCE
+
+action_form_non_aggression_pact = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_FORM_NAP_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_FORM_NAP_PROPOSE_01 = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+		SEAP_SAMPLE_FORM_NAP_PROPOSE_02 = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_FORM_NAP_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_FORM_NAP_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_break_non_aggression_pact = {
+	select = {
+		SEAP_SAMPLE_BREAK_NAP_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+
+	propose = {
+		SEAP_SAMPLE_BREAK_NAP_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+
+	accept = {
+		SEAP_SAMPLE_BREAK_NAP_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_guarantee_independence = {
+	select = {
+		SEAP_SAMPLE_GUARANTEE_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+
+	propose = {
+		SEAP_SAMPLE_GUARANTEE_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+
+	accept = {
+		SEAP_SAMPLE_GUARANTEE_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_break_guarantee = {
+	select = {
+		SEAP_SAMPLE_REVOKE_GUARANTEE_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+
+	propose = {
+		SEAP_SAMPLE_REVOKE_GUARANTEE_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+
+	accept = {
+		SEAP_SAMPLE_REVOKE_GUARANTEE_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_support_independence = {
+	select = {
+		SEAP_SAMPLE_SUPPORT_INDEPENDENCE_SELECT_LOYAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				NOR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+		SEAP_SAMPLE_SUPPORT_INDEPENDENCE_SELECT_DISLOYAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+	}
+
+	propose = {
+		SEAP_SAMPLE_SUPPORT_INDEPENDENCE_PROPOSE = {
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+	}
+
+	accept = {
+		SEAP_SAMPLE_SUPPORT_INDEPENDENCE_ACCEPT_LOYAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_SUPPORT_INDEPENDENCE_ACCEPT_DISLOYAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+	}
+}
+
+action_break_support = {
+	select = {
+		SEAP_SAMPLE_REVOKE_INDEPENDENCE_SELECT_LOYAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				NOR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+		SEAP_SAMPLE_REVOKE_INDEPENDENCE_SELECT_DISLOYAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+	}
+
+	propose = {
+		SEAP_SAMPLE_REVOKE_INDEPENDENCE_PROPOSE = {
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+	}
+
+	accept = {
+		SEAP_SAMPLE_REVOKE_INDEPENDENCE_ACCEPT_LOYAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_REVOKE_INDEPENDENCE_ACCEPT_DISLOYAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+	}
+}
+
+# BORDERS & MIGRATION
+
+action_form_migration_pact = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_FORM_MIGRATION_PACT_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_FORM_MIGRATION_PACT_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_FORM_MIGRATION_PACT_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_FORM_MIGRATION_PACT_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_break_migration_pact = {
+	select = {
+		SEAP_SAMPLE_BREAK_MIGRATION_PACT_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_BREAK_MIGRATION_PACT_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_BREAK_MIGRATION_PACT_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_open_borders = {
+	select = {
+		SEAP_SAMPLE_OPEN_BORDERS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_OPEN_BORDERS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_OPEN_BORDERS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_close_borders = {
+	select = {
+		SEAP_SAMPLE_CLOSE_BORDERS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_CLOSE_BORDERS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_CLOSE_BORDERS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+# FEDERATIONS
+
+action_invite_to_federation = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_ITOA_SELECT_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_federation = yes
+				}
+			}
+		}
+		SEAP_SAMPLE_ITOA_SELECT_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_federation = no
+				}
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_ITOA_PROPOSE_01 = {
+			trigger = {
+				FROM = { 
+					has_federation = yes
+					has_ai_personality = seap_sample
+				}
+				NOR = {
+					is_seap_personality = yes
+					is_megacorp = yes
+				}
+			}
+		}
+		SEAP_SAMPLE_ITOA_PROPOSE_02 = {
+			trigger = {
+				FROM = { 
+					has_federation = no
+					has_ai_personality = seap_sample
+				}
+				NOR = {
+					is_seap_personality = yes
+					is_megacorp = yes
+				}
+			}
+		}
+		SEAP_SAMPLE_CORP_ITOA_PROPOSE_01 = {
+			trigger = {
+				FROM = { 
+					has_federation = yes
+					has_ai_personality = seap_sample
+				}
+				is_megacorp = yes
+			}
+		}
+		SEAP_SAMPLE_CORP_ITOA_PROPOSE_02 = {
+			trigger = {
+				FROM = { 
+					has_federation = no
+					has_ai_personality = seap_sample
+				}
+				is_megacorp = yes
+			}
+		}
+		CORP_SEAP_SAMPLE_ITOA_PROPOSE_01 = {
+			trigger = {
+				FROM = { 
+					has_federation = yes
+					is_megacorp = yes
+					is_seap_personality = no
+				}
+				has_ai_personality = seap_sample
+			}
+		}
+		CORP_SEAP_SAMPLE_ITOA_PROPOSE_02 = {
+			trigger = {
+				FROM = { 
+					has_federation = no
+					is_megacorp = yes
+					is_seap_personality = no
+				}
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_SEAP_SAMPLE_ITOA_PROPOSE_01 = {
+			trigger = {
+				FROM = { 
+					has_federation = yes
+					has_ai_personality = seap_sample
+				}
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_SEAP_SAMPLE_ITOA_PROPOSE_02 = {
+			trigger = {
+				FROM = { 
+					has_federation = no
+					has_ai_personality = seap_sample
+				}
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ITOA_ACCEPT_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_federation = yes
+				}
+			}
+		}
+		SEAP_SAMPLE_ITOA_ACCEPT_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_federation = no
+				}
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_ITOA_REFUSE_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_federation = yes
+				}
+			}
+		}
+		SEAP_SAMPLE_ITOA_REFUSE_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_federation = no
+				}
+			}
+		}
+	}
+}
+
+action_ask_to_join_federation = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_ASK_TO_JOIN_A_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_ASK_TO_JOIN_A_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ASK_TO_JOIN_A_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_ASK_TO_JOIN_A_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_leave_federation = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_LEAVE_A_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_LEAVE_A_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_LEAVE_A_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_kick_from_federation = {
+	select = {
+		SEAP_SAMPLE_KICK_FROM_ALLIANCE_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_KICK_FROM_ALLIANCE_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_KICK_FROM_ALLIANCE_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_offer_federation_association_status = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_OFFER_FEDERATION_ASSOCIATION_STATUS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_OFFER_FEDERATION_ASSOCIATION_STATUS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_OFFER_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_OFFER_FEDERATION_ASSOCIATION_STATUS_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_revoke_federation_association_status = {
+	select = {
+		SEAP_SAMPLE_REVOKE_FEDERATION_ASSOCIATION_STATUS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_REVOKE_FEDERATION_ASSOCIATION_STATUS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_REVOKE_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_ask_for_federation_association_status = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_end_federation_association_status = {
+	select = {
+		SEAP_SAMPLE_END_FEDERATION_ASSOCIATION_STATUS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_END_FEDERATION_ASSOCIATION_STATUS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_END_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_ask_to_leave_federation = {
+	select = {
+		SEAP_SAMPLE_LEAVE_A_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_LEAVE_A_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_LEAVE_A_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+# SUBJUGATION
+
+action_demand_subjugation = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		# Vassalization Select
+		 SEAP_SAMPLE_DEMAND_VASS_SELECT_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		# Vassalization Select (Hostile)
+		SEAP_SAMPLE_DEMAND_VASS_SELECT_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				NOT = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_DEMAND_VASS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		# Accept
+		SEAP_SAMPLE_DEMAND_VASS_ACCEPT_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		# Refuse
+		SEAP_SAMPLE_DEMAND_VASS_REFUSE_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		# Refuse Hostile
+		SEAP_SAMPLE_DEMAND_VASS_REFUSE_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				NOR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+	}
+}
+
+action_ask_to_become_subjugated = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_ASK_FOR_VASS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_ASK_FOR_VASS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ASK_FOR_VASS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_ASK_FOR_VASS_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_demand_subsidiary = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		# Tankies
+		SEAP_SAMPLE_DEMAND_SUBS_SELECT_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = { is_socialism = yes }
+			}
+		}
+		# Capitalists
+		SEAP_SAMPLE_DEMAND_SUBS_SELECT_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = { is_capitalism = yes }
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_DEMAND_VASS_PROPOSE_01 = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+		SEAP_SAMPLE_DEMAND_VASS_PROPOSE_02 = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		# Tankies
+		SEAP_SAMPLE_DEMAND_SUBS_ACCEPT_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = { is_socialism = yes }
+			}
+		}
+		# Capitalists
+		SEAP_SAMPLE_DEMAND_SUBS_ACCEPT_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = { is_capitalism = yes }
+			}
+		}
+	}
+	refuse = {
+		# Tankies
+		SEAP_SAMPLE_DEMAND_SUBS_REFUSE_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = { is_socialism = yes }
+			}
+		}
+		# Capitalists
+		SEAP_SAMPLE_DEMAND_SUBS_REFUSE_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = { is_capitalism = yes }
+			}
+		}
+	}
+}
+
+action_ask_to_become_subsidiary = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_ASK_FOR_VASS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		# Tankies
+		SEAP_SAMPLE_ASK_FOR_SUBS_PROPOSE_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = { is_socialism = yes }
+			}
+		}
+		# Capitalists
+		SEAP_SAMPLE_ASK_FOR_SUBS_PROPOSE_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = { is_capitalism = yes }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ASK_FOR_VASS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_ASK_FOR_VASS_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_release_subject = {
+	select = {
+		SEAP_SAMPLE_RELEASE_SUBJECT_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_RELEASE_SUBJECT_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_RELEASE_SUBJECT_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_ask_to_be_released_subject = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_ASK_TO_BE_RELEASED_SUBJECT_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_ASK_TO_BE_RELEASED_SUBJECT_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ASK_TO_BE_RELEASED_SUBJECT_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_ASK_TO_BE_RELEASED_SUBJECT_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_demand_tributary = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_DEMAND_TRIBUTARY_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_DEMAND_VASS_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_DEMAND_TRIBUTARY_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_DEMAND_TRIBUTARY_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_ask_to_become_tributary = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {
+		SEAP_SAMPLE_ASK_FOR_VASS_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_ASK_BECOME_TRIBUTARY_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ASK_FOR_VASS_ACCEPT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_ASK_FOR_VASS_REFUSE = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+# COOPERATION
+
+action_form_commercial_pact = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = {	}
+	propose = { }
+	accept = {	}
+	refuse = {	}
+}
+
+action_form_research_agreement = {
+	consider = {
+		SEAP_SAMPLE_CONSIDER_01 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_CONSIDER_02 = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	select = { }
+	propose = {	}
+	accept = { }
+	refuse = { }
+}
+
+# EMBASSIES
+
+action_embassy = {
+	select = {
+		SEAP_SAMPLE_ESTABLISH_EMBASSY_SELECT = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_ESTABLISH_EMBASSY_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ESTABLISH_EMBASSY_ACCEPT_FRIENDLY = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_ESTABLISH_EMBASSY_ACCEPT_NEUTRAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_ESTABLISH_EMBASSY_ACCEPT_HOSTILE = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+	}
+	refuse = { }
+}
+
+action_recall_embassy = {
+	select = {
+		SEAP_SAMPLE_RECALL_EMBASSY_SELECT_FRIENDLY = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_RECALL_EMBASSY_SELECT_NEUTRAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_RECALL_EMBASSY_SELECT_HOSTILE = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_RECALL_EMBASSY_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_RECALL_EMBASSY_ACCEPT_FRIENDLY = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_RECALL_EMBASSY_ACCEPT_NEUTRAL = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_RECALL_EMBASSY_ACCEPT_HOSTILE = {
+			trigger = {
+				has_ai_personality = seap_sample
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+	}
+}
+
+# AGREEMENTS AND FEALTY
+
+action_negotiate_existing_agreement = {
+	propose = {
+		SEAP_SAMPLE_NEGOTIATE_EXISTING_AGREEMENT_PROPOSE = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ACCEPT_NEGOTIATE_EXISTING_AGREEMENT = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_DECLINE_NEGOTIATE_EXISTING_AGREEMENT = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+}
+
+action_pledge_secret_fealty = {
+	select = {
+		SEAP_SAMPLE_SELECT_PLEDGE_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_PROPOSE_PLEDGE_SECRET_FEALTY = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ACCEPT_PLEDGE_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_propose_secret_fealty = {
+	select = {
+		SEAP_SAMPLE_SELECT_PROPOSE_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_PROPOSE_SECRET_FEALTY = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ACCEPT_PROPOSE_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	reject = {
+		SEAP_SAMPLE_REJECT_PROPOSE_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_propose_to_break_secret_fealty = {
+	select = {
+		SEAP_SAMPLE_SELECT_REVOKE_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_PROPOSE_REVOKE_SECRET_FEALTY = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ACCEPT_REVOKE_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+
+action_break_secret_fealty = {
+	select = {
+		SEAP_SAMPLE_SELECT_BREAK_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_PROPOSE_BREAK_SECRET_FEALTY = {
+			trigger = {
+				FROM = { has_ai_personality = seap_sample }
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_ACCEPT_BREAK_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	reject = {
+		SEAP_SAMPLE_REJECT_BREAK_SECRET_FEALTY = {
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
+action_make_rival = {
+	select = {
+		SEAP_SAMPLE_MAKE_RIVAL_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				NOR = {
+					is_megacorp = yes
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+		TO_SEAP_SAMPLE_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_seap_personality = no
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = seap_sample
+					}
+				}
+			}
+		}
+		SEAP_SAMPLE_CORP_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 3 }
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+		CORP_SEAP_SAMPLE_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_megacorp = yes
+					is_seap_personality = no
+				}
+			}
+		}
+		SEAP_SAMPLE_SEAP_SAMPLE_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+	}
+	accept = {
+		SEAP_SAMPLE_MAKE_RIVAL_ACCEPT_HOSTILE = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = seap_sample
+					}
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_domineering_to = FROM
+					is_hostile_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_MAKE_RIVAL_ACCEPT_NEUTRAL = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = seap_sample
+					}
+				}
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_MAKE_RIVAL_ACCEPT_FRIENDLY = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = seap_sample
+					}
+				}
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		TO_SEAP_SAMPLE_MAKE_RIVAL_ACCEPT_HOSTILE = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				is_seap_personality = no
+				NOR = {
+					is_megacorp = yes
+					has_ai_personality = seap_sample
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_domineering_to = FROM
+					is_hostile_to = FROM
+				}
+			}
+		}
+		TO_SEAP_SAMPLE_MAKE_RIVAL_ACCEPT_NEUTRAL = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				is_seap_personality = no
+				NOR = {
+					is_megacorp = yes
+					has_ai_personality = seap_sample
+				}
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		TO_SEAP_SAMPLE_MAKE_RIVAL_ACCEPT_FRIENDLY = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				is_seap_personality = no
+				NOR = {
+					is_megacorp = yes
+					has_ai_personality = seap_sample
+				}
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_CORP_MAKE_RIVAL_ACCEPT = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_SEAP_SAMPLE_MAKE_RIVAL_ACCEPT = {
+			weight = { weight = 3 }
+			trigger = {
+				is_megacorp = yes
+				is_seap_personality = no
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+		SEAP_SAMPLE_SEAP_SAMPLE_MAKE_RIVAL_ACCEPT = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+	}
+}
+
+action_end_rivalry = {
+	select = {
+		SEAP_SAMPLE_END_RIVAL_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		SEAP_SAMPLE_END_RIVALRY_FRIENDLY = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_seap_personality = no
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = seap_sample
+					}
+				}
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_END_RIVALRY_NEUTRAL = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_seap_personality = no
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = seap_sample
+					}
+				}
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_END_RIVALRY_HOSTILE = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_seap_personality = no
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = seap_sample
+					}
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_threatened_to = FROM
+					is_domineering_to = FROM
+				}
+			}
+		}
+		TO_SEAP_SAMPLE_END_RIVALRY_HOSTILE = {
+			weight = { weight = 3 }
+			trigger = {
+				NOR = {
+					is_seap_personality = yes
+					is_megacorp = yes
+				}
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_domineering_to = FROM
+					is_hostile_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_CORP_END_RIVALRY_FRIENDLY = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_megacorp = yes
+					is_seap_personality = no
+				}
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		CORP_SEAP_SAMPLE_END_RIVALRY_FRIENDLY= {
+			weight = { weight = 3 }
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_CORP_END_RIVALRY_NEUTRAL= {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_megacorp = yes
+				}
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		CORP_SEAP_SAMPLE_END_RIVALRY_NEUTRAL= {
+			weight = { weight = 3 }
+			trigger = {
+				is_megacorp = yes
+				is_seap_personality = no
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_CORP_END_RIVALRY_HOSTILE= {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_megacorp = yes
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_threatened_to = FROM
+					is_domineering_to = FROM
+				}
+			}
+
+		}
+		CORP_SEAP_SAMPLE_END_RIVALRY_HOSTILE= {
+			weight = { weight = 3 }
+			trigger = {
+				is_megacorp = yes
+				is_seap_personality = no
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_threatened_to = FROM
+					is_domineering_to = FROM
+				}
+			}
+		}
+		SEAP_SAMPLE_SEAP_SAMPLE_END_RIVALRY= {
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+	}
+	accept = {
+		# SEAP_SAMPLEs to Default
+		SEAP_SAMPLE_END_RIVALRY_ACCEPT = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_seap_personality = no
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = seap_sample
+					}
+				}
+			}
+		}
+		SEAP_SAMPLE_CORP_END_RIVALRY_ACCEPT = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		SEAP_SAMPLE_SEAP_SAMPLE_END_RIVALRY_ACCEPT = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+	}
+}
+
+action_declare_war = {
+	propose = {
+		# Capitalists
+		SEAP_SAMPLE_DOW_PROPOSE_01 = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				is_capitalism = yes
+			}
+		}
+		SEAP_SAMPLE_DOW_PROPOSE_02 = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				is_capitalism = yes
+			}
+		}
+		# Generic
+		SEAP_SAMPLE_DOW_PROPOSE_03 = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				is_capitalism = no
+			}
+		}
+		SEAP_SAMPLE_DOW_PROPOSE_04 = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+				is_capitalism = no
+			}
+		}
+		# Subject
+		SEAP_SAMPLE_VASSAL_DOW_PROPOSE = {
+			weight = { weight = 3000 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					exists = overlord
+					overlord = { is_same_value = ROOT }
+				}
+			}
+		}
+	}
+	accept = {
+		# Generic
+		SEAP_SAMPLE_DOW_ACCEPT_01 = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_capitalism = yes
+				}
+			}
+		}
+		SEAP_SAMPLE_DOW_ACCEPT_02 = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_capitalism = yes
+				}
+			}
+		}
+		SEAP_SAMPLE_DOW_ACCEPT_03 = {
+			weight = { weight = 300 }
+			trigger = {
+				has_ai_personality = seap_sample
+				FROM = {
+					is_capitalism = no
+				}
+			}
+		}
+	}
+	propose_vote = {
+		SEAP_SAMPLE_DOW_VOTE_PROPOSE = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = { 
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+	}
+}
+
+action_offer_peace = {
+	consider = {
+		SEAP_SAMPLE_PEACE_CONSIDER_01 = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	propose = {
+		# Generic Empires
+		SEAP_SAMPLE_PEACE_PROPOSE_01 = {
+			weight = { weight = 3 }
+			trigger = {
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+		# MegaCorps
+		SEAP_SAMPLE_PEACE_PROPOSE_02 = {
+			weight = { weight = 3 }
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					has_ai_personality = seap_sample
+				}
+			}
+		}
+	}
+	accept = {
+		# Generic Empires
+		SEAP_SAMPLE_PEACE_ACCEPT_01 = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+	refuse = {
+		SEAP_SAMPLE_PEACE_REFUSE_01 = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_PEACE_REFUSE_02 = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_PEACE_REFUSE_03 = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_PEACE_REFUSE_04 = {
+			weight = { weight = 3 }
+			trigger = {
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_VASSAL_PEACE_REFUSE_01 = {
+			weight = { weight = 1000 }
+			trigger = {
+				exists = overlord
+				overlord = { is_same_value = FROM }
+				has_ai_personality = seap_sample
+			}
+		}
+		SEAP_SAMPLE_OVERLORD_PEACE_REFUSE_01 = {
+			weight = { weight = 1000 }
+			trigger = {
+				FROM = {
+					exists = overlord
+					overlord = { is_same_value = ROOT }
+				}
+				has_ai_personality = seap_sample
+			}
+		}
+	}
+}
